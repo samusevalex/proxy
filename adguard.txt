@@ -1,0 +1,3 @@
+yandex.ru##div[class$="Organic"]
+yandex.ru##div[class^="Organic Organic_with"]
+tv.starhit.ru##aside[class="_rightColumn_1jaki_4"]
