@@ -1,0 +1,50 @@
+﻿STP
+1. Какие бывают типы BPDU пакетов?
+2. Что такое TCN?
+3. Таймеры: Max Age, Hello, Forward Delay.
+4. Роли Alternate и Backup.
+5. Что такое extend system-id?
+
+OSPF
+1. Какие параметры должны совпасть для установления Adjacency?
+2. Какие есть типы пакетов? Hello, DD, LSR, LSU, LSA
+3. Какие есть типы Networks, в чём отличия?
+4. Типы LSA, куда делся №6?
+5. Какие есть Path Types?
+6. Что можно сказать по выводу команды show ip ospf neighbor? (иметь с собой листинг вывода)
+7. Что можно сказать по выводу команды show ip ospf interface fa0/0? (иметь с собой листинг вывода)
+
+BGP
+1. Какие стадии при установке сессии? Idle, Active, OpenSent, OpenConfirm, Extablished
+2. Что такое Table Version?
+3. Что можно сказать по выводу команды show ip bgp summary? (иметь с собой листинг вывода)
+4. Что можно сказать по выводу команды show ip bgp neighbor? (иметь с собой листинг вывода)
+5. Задачка с 4-я роутерами.
+6. Что такое Communities?
+
+
+Multicast
+1. Как происходит выбор Querier в IGMP?
+2. Как работает IGMP Snooping?
+3. Что такое RPF?
+4. Что можно сказать по выводу команды show ip pim neighbor?  (иметь с собой листинг вывода)
+5. Что можно сказать по выводу команды show ip mroute? (иметь с собой листинг вывода)
+6. Что такое Shortest Path Trees и Shared Tree?
+7. Какие протоколы используются для выбора RP?
+
+QoS
+1. Механизмы QoS?
+2. Claaification? NBAR
+3. Marking? IP Precedence и DSCP
+4. Congestion Avoidance? WRED
+5. Congestion Management? PQ, CBWFQ, LLC
+6. Policing & Shaping? Bucket и CIR
+
+Security
+1. VPN. IPSec, ISAKMP.
+2. В чём разница access-list in и access-list out
+3. DHCP snooping, ARP inspection, IP Source Guard.
+
+Linux
+1. Чем отличается Linux от Windows? Процессы, Планировщик задач, Распределение памяти, I/O
+2. Почему файл скомпилированный под Windows не запустится в Linux (без ~Wine)?

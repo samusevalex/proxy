@@ -1,0 +1,104 @@
+﻿				№1.
+import java.io.FileNotFoundException;
+public class Overload {
+	public void method(Object o) {
+		System.out.println("Object");
+	}
+	public void method(java.io.FileNotFoundException f){
+		System.out.println("FileNotFoundException");
+	}
+	public void method(java.io.IOException i) {
+		System.out.println("IOException");
+	}
+	public static void main(String args[]) {
+		Overload test = new Overload();
+		Object exception = new FileNotFoundException("");
+		test.method(exception);
+	}
+}
+Результатом его компиляции и выполнения будет:
+	1. Ошибка компиляции
+	2. Ошибка времени выполнения
+	3. «Object»
+	4. «FileNotFoundException»
+	5. «IOException» 
+
+				№2.
+class A {
+	A() {
+		print();
+	}
+	void print() {
+		System.out.println("A");
+	}
+}
+class B extends A {
+	int i = Math.round(3.5f);
+	public static void main(String[] args) {
+		A a = new B();
+		a.print();
+	}
+	void print() {
+		System.out.println(i);
+	}
+}
+Что будет выведено?
+	1. А 4
+	2. A A
+	3. 0 4
+	4. 4 4
+	5. другой ответ 
+
+				№3.
+class A {
+	public void print() throws Exception {
+		throw new Exception();
+	}
+}
+class B extends A {
+	public void print() {
+		System.out.println("B");
+	}
+}
+public class Main {
+	public static final void main(String[] args) {
+		A a = new B();
+		a.print();
+	}
+}
+Что будет выведено в результате выполнения этого кода?
+	1. B
+	2. Ничего
+	3. Ошибка компиляции
+	4. Exception
+
+				№4.
+public class Main {
+	public static final void main(String[] args) {
+		Integer a = 120;
+		Integer b = 120;
+		Integer c = 130;
+		Integer d = 130;
+		System.out.println(a==b);
+		System.out.println(c==d);
+	}
+}
+В результате выполнения данного кода будет выведено:
+	1. true true
+	2. false false
+	3. false true
+	4. true false
+	5. произойдет ошибка времени выполнения
+
+				№5.
+import java.util.stream.Stream;
+class Test {
+	public static void main(String[] args) throws Exception {
+		Stream.of("1", "2", "3").map(s -> s + " ").peek(System.out::print).filter(s -> false).findAny();
+	}
+}
+Что будет выведено в результате выполнения этого кода?
+	1. 1
+	2. Ничего
+	3. Ошибка компиляции
+	4. 1 2 3

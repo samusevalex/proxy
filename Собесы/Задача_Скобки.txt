@@ -1,0 +1,186 @@
+﻿		[]()[][()] -- true
+		[[(())]]   -- true
+		[[[]]  -- false
+		]][[   -- false
+		[]]    -- false
+		[(])   -- false
+
+boolean foo(String str){
+	Stack<Character> s = new Stack<>();
+	for(char c : str.toCharArray())
+		switch(c){
+			case ']':
+				if (s.empty() || s.pop() != '[')
+					return false;
+				break;
+			case ')':
+				if (s.empty() || s.pop() != '(')
+					return false;
+				break;
+			case '[':
+			case '(':
+				s.push(c);
+				break;
+			default:
+				break;
+		}	
+	return s.empty();
+}
+
+Stack<Integer> lexer(String str) {
+	Stack<Integer> input = new Stack<>();
+	input.push(Integer.MIN_VALUE + '(');
+	for (int i : str.toCharArray())
+		switch (i) {
+                case '(':
+                    input.push(Integer.MIN_VALUE + '(');
+                    break;
+                case ')':
+                    input.push(Integer.MIN_VALUE + ')');
+                    break;
+                case '+':
+                    input.push(Integer.MIN_VALUE + '+');
+                    break;
+                case '-':
+                    input.push(Integer.MIN_VALUE + '-');
+                    break;
+                case '*':
+                    input.push(Integer.MIN_VALUE + '*');
+                    break;
+                case '/':
+                    input.push(Integer.MIN_VALUE + '/');
+                    break;
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    if (input.empty()
+                     || input.peek() == Integer.MIN_VALUE + '('
+                     || input.peek() == Integer.MIN_VALUE + ')'
+                     || input.peek() == Integer.MIN_VALUE + '+'
+                     || input.peek() == Integer.MIN_VALUE + '-'
+                     || input.peek() == Integer.MIN_VALUE + '*'
+                     || input.peek() == Integer.MIN_VALUE + '/'
+                    )
+                        input.push(Character.getNumericValue(i));
+                    else
+                        input.push(10 * input.pop() + Character.getNumericValue(i));
+                    break;
+                default:
+            }
+        input.push(Integer.MIN_VALUE + ')');
+        return input;
+    }
+
+
+    Stack<Integer> parser(Stack<Integer> input) {
+        Stack<Integer> s = new Stack<>();
+        Stack<Integer> r = new Stack<>();
+
+        Map<Integer, Integer> p = new HashMap<>();
+        p.put(Integer.MIN_VALUE + '(', 1);
+        p.put(Integer.MIN_VALUE + '+', 2);
+        p.put(Integer.MIN_VALUE + '-', 2);
+        p.put(Integer.MIN_VALUE + '*', 3);
+        p.put(Integer.MIN_VALUE + '/', 3);
+
+        for (int i : input)
+            switch (i) {
+                case Integer.MIN_VALUE + '(':
+                    s.push(Integer.MIN_VALUE + '(');
+                    break;
+                case Integer.MIN_VALUE + ')':
+                    while ((i = s.pop()) != Integer.MIN_VALUE + '(')
+                        r.push(i);
+                    break;
+                case Integer.MIN_VALUE + '+':
+                case Integer.MIN_VALUE + '-':
+                case Integer.MIN_VALUE + '*':
+                case Integer.MIN_VALUE + '/':
+                    while (!s.empty() && p.get(s.peek()) >= p.get(i))
+                        r.push(s.pop());
+                    s.push(i);
+                    break;
+                default:
+                    r.push(i);
+            }
+        return r;
+    }
+
+    int executor(Stack<Integer> execute) {
+        Stack<Integer> s = new Stack<>();
+        for (int i : execute)
+            switch (i) {
+                case Integer.MIN_VALUE + '+':
+                    s.push(s.pop() + s.pop());
+                    break;
+                case Integer.MIN_VALUE + '-':
+                    s.push(s.pop() - s.pop());
+                    break;
+                case Integer.MIN_VALUE + '*':
+                    s.push(s.pop() * s.pop());
+                    break;
+                case Integer.MIN_VALUE + '/':
+                    s.push(s.pop() / s.pop());
+                    break;
+                default:
+                    s.push(i);
+            }
+        return s.pop();
+    }
+
+    boolean validateParenthesis(Stack<Integer> input) {
+        Stack<Integer> s = new Stack<>();
+        for (int i : input)
+            switch (i) {
+                case Integer.MIN_VALUE + ')':
+                    if (s.empty() || s.pop() != Integer.MIN_VALUE + '(')
+                        return false;
+                    break;
+                case Integer.MIN_VALUE + '(':
+                    s.push(i);
+                    break;
+                default:
+            }
+        return s.empty();
+    }
+
+    boolean validateOperands(Stack<Integer> input) {
+        Stack<Integer> s = new Stack<>();
+        for (int i : input)
+            switch (i) {
+                case Integer.MIN_VALUE + '(':
+                case Integer.MIN_VALUE + ')':
+                    break;
+                default:
+                    s.push(i);
+            }
+        s.push(Integer.MIN_VALUE + '+');
+        while (!s.empty()) {
+            switch (s.pop()) {
+                case Integer.MIN_VALUE + '+':
+                case Integer.MIN_VALUE + '-':
+                case Integer.MIN_VALUE + '*':
+                case Integer.MIN_VALUE + '/':
+                    break;
+                default:
+                    return false;
+            }
+            switch (s.pop()) {
+                case Integer.MIN_VALUE + '+':
+                case Integer.MIN_VALUE + '-':
+                case Integer.MIN_VALUE + '*':
+                case Integer.MIN_VALUE + '/':
+                    return false;
+                default:
+            }
+        }
+        return true;
+    }
+}

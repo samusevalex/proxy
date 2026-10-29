@@ -1,0 +1,8 @@
+﻿[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/home/samusev/idea/bin/idea.sh
+Name=Idea
+Comment=Idea
+Icon=/home/samusev/idea/bin/idea.png

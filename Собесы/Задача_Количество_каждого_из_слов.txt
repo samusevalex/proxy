@@ -1,0 +1,5 @@
+﻿getStream().distinct().forEach(x -> System.out.println(x + getStream().filter(s->s==x).count()));
+
+Stream<String> getStream(){
+	return Stream.of("kolya", "vasya", "vasya", "masha", "vasya", "masha");
+}

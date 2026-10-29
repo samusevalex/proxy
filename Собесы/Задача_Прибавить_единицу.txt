@@ -1,0 +1,5 @@
+﻿int a[] = {0,3,2,1}
+int n = a.length
+while(a[--n]==9)
+	a[n]=0
+a[n]++

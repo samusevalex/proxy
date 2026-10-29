@@ -1,0 +1,48 @@
+﻿Задание №1
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		System.out.println(method1());
+
+	}
+	public static int method1() {
+		String str = null;
+		try {
+			if (str.equals("message")) {
+				System.out.println(str);
+			}
+		} catch (NullPointerException npe) {
+			System.out.println("NPE");
+			return 0;
+		} finally {
+			System.out.println("Finally");
+			return 1;
+		}
+	}
+
+}
+
+Задание №2
+
+public class Main {
+	public static void main(String[] args) {
+		Stream.of("v1", "v3", "v2", "v3", "v2", "v3", "v1", "v4")
+
+			.filter(x -> x.equals("v1"))
+			.peek(System.out::println);
+
+		Stream.of("v1", "v3", "v2", "v3", "v2", "v3", "v1", "v4")
+
+			.filter(x -> x == "v2")
+			.forEach(System.out::println);
+
+		Integer number = Stream.of(1, 2, 3, 120, 410, 85, 32, 314, 12)
+			.map(integer -> integer * 2)
+			.findFirst()
+			.orElse(null);
+		System.out.println(number);
+	}
+
+}

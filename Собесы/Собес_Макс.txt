@@ -1,0 +1,54 @@
+﻿Резюме:
+
+Design Patterns
+JSP / Servlets / Apache Cocoon XSP / JSTL
+EJB 2.x / EJB 3.x
+Web-Services
+JDBC / JPA / MyBATIS
+XML / XML Schemas / XSLT
+Struts / Struts 2
+Wicket
+GWT
+Rabbit MQ / JMS / Tibco Rendezvous / IBM WebSphere MQ
+Spring
+jQuery / jQueryUI
+Oracle DB / IBM DB2 / PostgreSQL / MySQL /Microsoft SQL Server
+Git / SVN / CVS / Microsoft Visual SourceSafe / Perforce
+Apache Ant / Apache Maven
+Apache Tomcat / IBM WebSphere / Oracle WebLogic Server / TomEE
+
+
+
+
+
+Собеседование Java Макс:
+
+Опыт за последнее время. В моём случае разговор был о React/Redux/Saga и Docker/Kubernetes(OKD)
+HashMap - внутреннее устройство и сложность операций
+ConcurrentHashMap vs Collections.synchronizedMap(new HashMap())
+Для чего volatile? В чём смысл атомиков?
+ReentrantReadWriteLock vs synchronized
+Были вопросы по DeadLock, Livelock
+Шаблоны проектирования
+Proxy vs Adapter vs Decorator - в чём отличия?
+Что такое SOLID?
+Spring
+Что такое IoC и как он соотносится с DI?
+Какие бывают Bean Scopes? Для каких целей имеет смысл использовать Prototype scope?
+Spring аннотации @Cacheble, @Async, @Transactional, etc. - как работает эта магия?
+
+Нужно ли создавать интерфейс, если планируется только один класс его реализующий (MyService/MyServiceImpl)?
+О чём должен заботиться разработчик делая функциональность внутрибанковского перевода денег?
+Exceptions - checked, unchecked. Можно ли перехватывать общие ошибки: catch (Exception e) или catch (Throwable e)? Затрагивали отлов ошибок на уровне контроллера с помощью @ExceptionHandler
+Что такое SOAP и чем отличается от REST? HTTP status codes затрагивали.
+
+Базы данных
+Что такое транзакции? Какие бывают уровни изоляции? Как работает Repeatable read?
+Индексы. Нужно ли на все поля ставить индексы? По какому принципу расставлять индексы?
+Типы индексов (что-то про B-tree, Hash, GiST в postgresql)
+SQL - как удалить дубликаты из таблицы?
+Hibernate
+Когда возникает LazyInitializationException и как его обходить?
+Можно ли делать запрос select all из таблицы, в которой миллионы записей? К каким последствия это может привести? Как отсоединить объект от hibernate сессии и для чего это может потребоваться?
+Микросервисы совсем немного речь шла. Вопрос был общий про межсервисную коммуникацию (JMS, RabbitMQ, ActiveMQ, Kafka, etc.)
+Некоторые вопросы вылезли из-за того, что я на них вышел в процессе рассуждения. Например, когда я каким-то образом вышел на scala cats и scalaz, то прозвучал вопрос про монад

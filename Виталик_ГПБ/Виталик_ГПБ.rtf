@@ -1,0 +1,135 @@
+{\rtf1\ansi\ansicpg1251\deff0\deflang1049{\fonttbl{\f0\fnil\fcharset204{\*\fname Courier New;}Courier New CYR;}}
+{\colortbl ;\red255\green0\blue0;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl240\slmult1\f0\fs22 1. IP \'e0\'e4\'f0\'e5\'f1\'e0\'f6\'e8\'ff \'e8 \'f0\'e0\'e7\'e1\'e8\'e5\'ed\'e8\'e5 \'ed\'e0 \'ef\'ee\'e4\'f1\'e5\'f2\'e8:\par
+\tab\tab\tab\tab\tab\tab\tab\tab +--\tab 10.0.0.0 /255.255.255.240 (0..15)\par
+\tab\tab\tab +---\tab 10.0.0.0 (0..63) -------+--\tab 10.0.0.16/255.255.255.240 (16..31)\par
+\tab\tab\tab |\tab 255.255.255.192\tab\tab +--\tab 10.0.0.32/255.255.255.240 (32..48)\par
+\tab\tab\tab |\tab\tab\tab\tab\tab +--\tab 10.0.0.48/255.255.255.240 (48..63)\par
+\tab\tab\tab +---\tab 10.0.0.64 (64..127)\par
+\tab\tab\tab |\tab 255.255.255.192\par
+10.0.0.0(0..255)\tab |\par
+255.255.255.0  ---+---\tab 10.0.0.128 (128..191)\par
+\tab\tab\tab |\tab 255.255.255.192\par
+\tab\tab\tab |\par
+\tab\tab\tab +---\tab 10.0.0.192 (192..255)\par
+\tab\tab\tab\tab 255.255.255.192\par
+\par
+2. Vlan-\'fb \'e8\'eb\'e8 \'ec\'f3\'eb\'fc\'f2\'e8\'ef\'eb\'e5\'ea\'f1\'e8\'f0\'ee\'e2\'e0\'ed\'e8\'e5.\par
+\tab\'c7\'e0\'e4\'e0\'f7\'e0:\tab\'ca\'e0\'ea \'f7\'e5\'f0\'e5\'e7 \'ee\'e4\'e8\'ed \'ef\'f0\'ee\'e2\'ee\'e4 \'ef\'e5\'f0\'e5\'e4\'e0\'e2\'e0\'f2\'fc \'e4\'e0\'ed\'ed\'fb\'e5 2-\'f5 \'e8 \'e1\'ee\'eb\'e5\'e5 \'f0\'e0\'e7\'eb\'e8\'f7\'ed\'fb\'f5 \'ef\'ee\'f2\'ee\'ea\'ee\'e2.\par
+\tab\'d0\'e5\'f8\'e5\'ed\'e8\'e5:\tab\'c4\'eb\'ff \'ee\'ef\'f2\'e8\'f7\'e5\'f1\'ea\'ee\'e3\'ee \'ea\'e0\'e1\'e5\'eb\'ff (\'f2\'e5\'f5\'ed\'ee\'eb\'ee\'e3\'e8\'ff \b WDM\b0 )-\'ed\'e0 \'ee\'e4\'ed\'ee\'e9 \'f7\'e0\'f1\'f2\'ee\'f2\'e5 \'ef\'e5\'f0\'e5\'e4\'e0\'e2\'e0\'f2\'fc 1-\'fb\'e9 \'ef\'ee\'f2\'ee\'ea, \'ed\'e0 \'e2\'f2\'ee\'f0\'ee\'e9 \'f7\'e0\'f1\'f2\'ee\'f2\'e5 2-\'ee\'e9 \'ef\'ee\'f2\'ee\'ea\par
+\tab\tab\tab\'c2 \'ec\'ee\'e1\'e8\'eb\'fc\'ed\'ee\'e9 \'f1\'e2\'ff\'e7\'e8 (\b TDM\b0 )-\'e2 \'ef\'e5\'f0\'e2\'f3\'fe \'f1\'e5\'ea\'f3\'ed\'e4\'f3 \'ef\'e5\'f0\'e5\'e4\'e0\'b8\'f2 1-\'fb\'e9 \'ef\'ee\'f2\'ee\'ea, \'e2\'ee \'e2\'f2\'ee\'f0\'f3\'fe \'f1\'e5\'ea 2-\'ee\'e9, \'e2 \'f2\'f0\'e5\'f2\'fc\'fe \'ee\'ef\'ff\'f2\'fc 1-\'fb\'e9, \'e2 \'f7\'e5\'f2\'e2\'e5\'f0\'f2\'f3\'fe - 2-\'ee\'e9, 5 - 1 \'e8 \'f2.\'e4.\par
+\tab\tab\tab\'c2 Ethernet (\b VLAN\b0 )-\'ea\'e0\'e6\'e4\'fb\'e9 \'ef\'e0\'ea\'e5\'f2 \'ec\'e0\'f0\'ea\'e8\'f0\'f3\'e5\'ec \'ec\'e5\'f2\'ea\'ee\'e9 = Vlan ID. \'c2 \'e7\'e0\'e2\'e8\'f1\'e8\'ec\'ee\'f1\'f2\'e8 \'ee\'f2 Vlan ID \'ef\'ee\'ed\'e8\'ec\'e0\'e5\'ec, \'ea \'ea\'e0\'ea\'ee\'ec\'f3 \'ef\'ee\'f2\'ee\'ea\'f3 \'ee\'f2\'ed\'ee\'f1\'e8\'f2\'f1\'ff \'ef\'e0\'ea\'e5\'f2.\par
+\par
+\'cf\'e0\'ea\'e5\'f2\'fb \'ed\'e0 \'f3\'f0\'ee\'e2\'ed\'e5 \'cc\'c0\'d1-\'e0\'e4\'f0\'e5\'f1\'ee\'e2 \'e1\'fb\'e2\'e0\'fe\'f2 \'f2\'ee\'eb\'fc\'ea \'e4\'e2\'f3\'f5 \'f2\'e8\'ef\'ee\'e2 - \b Untagged\b0  \'e8 \b Tagged\b0\par
+\pard\nowidctlpar\hyphpar0\sl240\slmult1\kerning1\par
+Untagged:\par
+\par
+|  6 \'e1\'e0\'e9\'f2\tab |  6 \'e1\'e0\'e9\'f2\tab |2\'e1\'e0\'e9\'f2|\tab\tab |  4\tab |\par
+|-----------------------------------------------|\par
+\pard\sl240\slmult1 |MAC Destin\tab |MAC Source\tab |Type\tab |  Payload\tab | FCS\tab |\par
+\par
+\'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5 \'ef\'ee\'eb\'ff Type \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'ff\'e5\'f2 \'ea\'e0\'ea\'ee\'e9 Layer 3 \'e7\'e0\'e3\'ee\'eb\'ee\'e2\'ee\'ea \'e1\'f3\'e4\'e5\'f2 \'e4\'e0\'eb\'fc\'f8\'e5 \'e2 \'ef\'e0\'ea\'e5\'f2\'e5\par
+\pard\nowidctlpar\hyphpar0\li568\sl240\slmult1 0x0800 - IPv4\par
+0x86DD - IPv6\par
+0x0806 - ARP\par
+\cf1\b 0x8100\b0  \cf0 -\cf1  \b Vlan 802.1q\cf0\b0\par
+0x8137 - IPX\par
+\pard\sl240\slmult1\par
+\pard\nowidctlpar\hyphpar0\sl240\slmult1\kerning0 Tagged, \'e2\'ed\'f3\'f2\'f0\'fc \'e2\'f1\'f2\'e0\'e2\'eb\'ff\'e5\'f2\'f1\'ff \'e7\'e0\'e3\'ee\'eb\'ee\'e2\'ee\'ea 802.1q c 12 \'e1\'e8\'f2\'ed\'fb\'ec \'ef\'ee\'eb\'e5\'ec Vlan ID - \'f2\'f3\'f2 \'e2 \'ef\'e0\'ea\'e5\'f2\'e5 \'e8 \'ef\'e5\'f0\'e5\'ed\'ee\'f1\'e8\'f2\'f1\'ff \'ed\'ee\'ec\'e5\'f0 Vlan-\'e0. \'d2.\'ea. \'ef\'ee\'eb\'e5 Vlan ID - 12 \'e1\'e8\'f2, \'f2\'ee \'ee\'ed\'ee \'ec\'ee\'e6\'e5\'f2 \'ef\'f0\'e8\'ed\'e8\'ec\'e0\'f2\'fc \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'ff \'ee\'f2 0 \'e4\'ee 4096 - \'e7\'ed\'e0\'f7\'e8\'f2 \'ed\'e5 \'ec\'ee\'e6\'e5\'f2 \'e1\'fb\'f2\'fc Vlan-\'e0 \'f1 \'ed\'ee\'ec\'e5\'f0\'ee\'ec, \'ea \'ef\'f0\'e8\'ec\'e5\'f0\'f3, 4097.\par
+\kerning1\par
+|  6 \'e1\'e0\'e9\'f2\tab |  6 \'e1\'e0\'e9\'f2\tab |2\'e1\'e0\'e9\'f2| 4 \'e1\'e8\'f2\'e0 | 12 \'e1\'e8\'f2 |2\'e1\'e0\'e9\'f2|\tab\tab |  4\tab |\par
+|-----------------------------------------------------------------------|\par
+\pard\sl240\slmult1 |MAC Destin\tab |MAC Source\tab |\cf1\b 0x8100\cf0\b0 |PCP/DEI| \cf1\b Vlan ID\cf0\b0 |Type | Payload\tab | FCS\tab |\kerning0\par
+\par
+\'d1\'e0\'ec\'e0\'ff \'ef\'e5\'f0\'e2\'e0\'ff \'ed\'e0\'f1\'f2\'f0\'ee\'e9\'ea\'e0, \'ea\'ee\'f2\'ee\'f0\'e0\'ff \'e4\'e5\'eb\'e0\'e5\'f2\'f1\'ff \'ed\'e0 \'ef\'ee\'f0\'f2\'f3 \'f1\'e2\'e8\'f2\'f7\'e0 - \'e2\'fb\'f1\'f2\'e0\'e2\'eb\'ff\'e5\'ec \i switchport mode\i0 . \'c1\'fb\'e2\'e0\'e5\'f2 2-\'e0 \'f0\'e5\'e6\'e8\'ec\'e0 access \'e8 trunk.\par
+\par
+\'c2 \'f0\'e5\'e6\'e8\'ec\'e5 \i switchport mode access\i0  - \'ef\'ee\'f0\'f2 \'ee\'f2\'ef\'f0\'e0\'e2\'eb\'ff\'e5\'f2/\'ef\'f0\'e8\'ed\'e8\'ec\'e0\'e5\'f2 \'f2\'ee\'eb\'fc\'ea\'ee \'ef\'e0\'ea\'e5\'f2\'fb \'e2 \'f4\'ee\'f0\'ec\'e0\'f2\'e5 Untagged.\par
+interface Fa0/10\par
+\tab switchport mode access\par
+\tab switchport access vlan 22 - \'ef\'ee\'f0\'f2 \'f0\'e0\'e1\'ee\'f2\'e0\'e5\'f2 \'f2\'ee\'eb\'fc\'ea\'ee \'f1 Untagged \'ef\'e0\'ea\'e5\'f2\'e0\'ec\'e8, \'ee\'f2\'ed\'ee\'f1\'ff\'f9\'e8\'e5\'f1\'ff \'ea \'ef\'ee\'f2\'ee\'ea\'f3 \'f1 vlan 22.\par
+\par
+\'c2 \'f0\'e5\'e6\'e8\'ec\'e5 \i switchport mode trunk\i0  - \'ef\'ee\'f0\'f2 \'ee\'f2\'ef\'f0\'e0\'e2\'eb\'ff\'e5\'f2/\'ef\'f0\'e8\'ed\'e8\'ec\'e0\'e5\'f2 \'f2\'ee\'eb\'fc\'ea\'ee \'ef\'e0\'ea\'e5\'f2\'fb \'e2 \'f4\'ee\'f0\'ec\'e0\'f2\'e5 Tagged.\par
+interface Fa0/22\par
+\tab switchport mode trunk\par
+\tab switchport trunk allowed vlan 22,33 - \'f2\'e5\'ef\'e5\'f0\'fc \'fd\'f2\'ee \'ef\'ee\'f0\'f2 \'f1\'ec\'ee\'e6\'e5\'f2 \'ef\'e5\'f0\'e5\'e4\'e0\'e2\'e0\'f2\'fc Tagged \'ef\'e0\'ea\'e5\'f2\'fb \'ee\'f2\'ed\'ee\'f1\'ff\'f9\'e8\'e5\'f1\'ff, \'f2\'ee\'eb\'fc\'ea\'ee \'ea 22 \'e8 33 vlan-\'e0\'ec\par
+\par
+Best practice:\par
+\'cf\'ee\'f0\'f2\'fb \'ed\'e0 \'f1\'e2\'e8\'f2\'f7\'e5, \'ea \'ea\'ee\'f2\'ee\'f0\'fb\'ec \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e0\'fe\'f2\'f1\'ff \'ea\'ee\'ec\'ef\'fb \'e8 \'f1\'e5\'f0\'e2\'e5\'f0\'e0 - \'e2\'f1\'e5\'e3\'e4\'e0 \'e2 \'f0\'e5\'e6\'e8\'ec\'e5 \i access\i0 .\par
+\'cf\'ee\'f0\'f2\'fb \'ed\'e0 \'f1\'e2\'e8\'f2\'f7\'e5, \'ea \'ea\'ee\'f2\'ee\'f0\'fb\'ec \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e5\'ed\'fb \'e4\'f0\'f3\'e3\'e8\'e5 \'f1\'e2\'e8\'f2\'f7\'e8, \'ec\'e0\'f0\'f8\'f0\'f3\'f2\'e8\'e7\'e0\'f2\'ee\'f0\'fb, firewall - \'e2\'f1\'e5\'e3\'e4\'e0 \'e2 \'f0\'e5\'e6\'e8\'ec\'e5 \i trunk\i0 .\par
+\par
+\par
+3. Spanning-tree\par
+\tab\'c7\'e0\'e4\'e0\'f7\'e0:\tab\'ce\'e1\'ed\'e0\'f0\'f3\'e6\'e8\'f2\'fc \'e8 \'e7\'e0\'e1\'eb\'ee\'ea\'e8\'f0\'ee\'e2\'e0\'f2\'fc \'ef\'e5\'f2\'eb\'fe, \'f2.\'ea. \'f3 Ethernet \'ef\'f0\'e8 \'ee\'e1\'f0\'e0\'e7\'ee\'e2\'e0\'ed\'e8\'e8 \'ef\'e5\'f2\'eb\'e8 \'f1\'ed\'ee\'f1\'e8\'f2 \'ea\'f0\'fb\'f8\'f3.\par
+\tab\'d0\'e5\'f8\'e5\'ed\'e8\'e5:\tab\'d1\'e8\'f1\'f2\'e5\'ec\'e0 \'f1\'f2\'f0\'ee\'e8\'f2 \'e4\'e5\'f0\'e5\'e2\'ee. \'cd\'e0 \'ea\'e0\'e6\'e4\'ee\'ec \'f1\'e2\'e8\'f2\'f7\'e5 \'ed\'e0\'f1\'f2\'f0\'e0\'e8\'e2\'e0\'e5\'ec \'ef\'e0\'f0\'e0\'ec\'e5\'f2\'f0 priority (0..65535). \'d3 \'ea\'ee\'e3\'ee priority \'ed\'e0\'e8\'ec\'e5\'ed\'fc\'f8\'e8\'e9 \'f2\'ee\'f2 ROOT. \'c4\'e0\'eb\'e5\'e5 ROOT \'e2\'ee \'e2\'f1\'e5 \'f1\'e2\'ee\'e8 \'eb\'e8\'ed\'ea\'e8 \'ee\'f2\'ef\'f0\'e0\'e2\'eb\'ff\'e5\'f2 \'ef\'e0\'ea\'e5\'f2\'fb BPDU. \'c5\'f1\'eb\'e8 \'e2\'e4\'f0\'f3\'e3 \'fd\'f2\'e8 \'ef\'e0\'ea\'e5\'f2\'fb \'e4\'f0\'f3\'e3 \'f1 \'e4\'f0\'f3\'e3\'ee\'ec \'ef\'e5\'f0\'e5\'f1\'e5\'ea\'eb\'e8\'f1\'fc - \'ef\'e5\'f2\'eb\'ff, \'e8 \'f1\'e2\'e8\'f2\'f7\'e8 \'fd\'f2\'ee\'f2 \'eb\'e8\'ed\'ea \'e1\'eb\'ee\'ea\'e8\'f0\'f3\'fe\'f2.\par
+\par
+\'cd\'e0\'f1\'f2\'f0\'ee\'e9\'ea\'e8 Spanning-tree:\par
+Cisco \'ef\'ee\'e4\'e4\'e5\'f0\'e6\'e8\'e2\'e0\'e5\'f2 \'ed\'e5\'f1\'ea\'ee\'eb\'fc\'ea\'ee \'f0\'e5\'e6\'e8\'ec\'ee\'e2 (mode) \'f0\'e0\'e1\'ee\'f2\'fb STP: MST - \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'f3\'e5\'f2\'f1\'ff \'e7\'e0\'f7\'e0\'f1\'f2\'f3\'fe \'f2\'ee\'eb\'fc\'ea\'ee \'e2 \'ef\'f0\'ee\'e2\'e0\'e9\'e4\'e5\'f0\'f1\'ea\'e8\'f5 \'f1\'e5\'f2\'ff\'f5, PVST+ - \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'f3\'e5\'f2\'f1\'ff \'e5\'f1\'eb\'e8 \'e2 \'f1\'e5\'f2\'e8 \'e7\'ee\'ee\'ef\'e0\'f0\'ea \'e8\'e7 \'e2\'e5\'ed\'e4\'ee\'f0\'ee\'e2, \'f2.\'e5. \'e5\'f1\'f2\'fc \'e8 Juniper \'e8 Huawei, Rapid PVST+ - \'e5\'f1\'eb\'e8 \'f1\'e5\'f2\'fc \'f2\'ee\'eb\'fc\'ea\'ee \'e8\'e7 Cisco\par
+#spanning-tree mode rapid-pvst\par
+\'cd\'e0 \'f1\'e2\'e8\'f2\'f7\'e0\'f5 \'ed\'e0\'f1\'f2\'f0\'ee\'e8\'f2\'fc priority \'e4\'eb\'ff \'e2\'fb\'e1\'ee\'f0\'e0 ROOT.\par
+spanning-tree vlan 1-4094 priority 0\tab\tab - \'e7\'ed\'e0\'f7\'e8\'f2 \'fd\'f2\'ee\'f2 \'f1\'e2\'e8\'f2\'f7 \'e1\'f3\'e4\'e5\'f2 ROOT\par
+\'d4\'e0\'ea\'f2\'e8\'f7\'e5\'f1\'ea\'e8 \'e2\'f1\'b8, \'ee\'f1\'f2\'e0\'eb\'fc\'ed\'ee\'e5 \'f2\'fe\'ed\'e8\'ed\'e3.\par
+\par
+4. OSPF \'e4\'e8\'ed\'e0\'ec\'e8\'f7\'e5\'f1\'ea\'e0\'ff \'ec\'e0\'f0\'f8\'f0\'f3\'f2\'e8\'e7\'e0\'f6\'e8\'ff.\par
+\tab\'d1\'f2\'e0\'ed\'f6\'e8\'ff \'ec.\'d2\'e0\'e3\'e0\'ed\'f1\'ea\'e0\'ff \'e7\'ed\'e0\'e5\'f2 \'f7\'f2\'ee \'f3 \'ed\'e5\'b8 6 \'eb\'e8\'ed\'ea\'ee\'e2 \'e8 \'f1\'ee\'ee\'f2\'e2\'e5\'f2\'f1\'f2\'e2\'e5\'ed\'ed\'ee 6 \'f1\'ee\'f1\'e5\'e4\'ed\'e8\'f5 \'f1\'f2\'e0\'ed\'f6\'e8\'e9. \'dd\'f2\'ee\'f2 \'e1\'eb\'ee\'ea \'e8\'ed\'f4\'ee\'f0\'ec\'e0\'f6\'e8\'e8 \'e2 OSPF \'ed\'e0\'e7\'fb\'e2\'e0\'e5\'f2\'f1\'ff LSA.\par
+\tab\tab LSA\par
+\tab Router ID: \'d2\'e0\'e3\'e0\'ed\'f1\'ea\'e0\'ff\par
+\tab Neighbor 1: \'d2\'f0\'e5\'f2\'fc\'ff\'ea\'ee\'e2\'f1\'ea\'e0\'ff\par
+\tab Neighbor 2: \'cf\'e0\'e2\'e5\'eb\'e5\'f6\'ea\'e0\'ff\par
+\tab Neighbor 3: ...\par
+\'d2.\'e5. \'f3 \'ea\'e0\'e6\'e4\'ee\'e3\'ee \'f0\'ee\'f3\'f2\'e5\'f0\'e0 \'e5\'f1\'f2\'fc \'f1\'e2\'ee\'e9 LSA, \'ee\'ef\'e8\'f1\'fb\'e2\'e0\'fe\'f9\'e8\'e9 \'e5\'e3\'ee \'eb\'e8\'ed\'ea\'e8. \'d2\'e5\'ef\'e5\'f0\'fc \'e7\'e0\'e4\'e0\'f7\'e0 \'e4\'f0\'f3\'e6\'ed\'ee \'ee\'e1\'ec\'e5\'ed\'ff\'f2\'fc\'f1\'ff \'fd\'f2\'e8\'ec\'e8 LSA. E\'f1\'eb\'e8 \'e2 \'ed\'e0\'f8\'e5\'e9 \'f1\'e5\'f2\'e8 100 \'f0\'ee\'f3\'f2\'e5\'f0\'ee\'e2, \'f2\'ee \'e2 \'e1\'e0\'e7\'e5 \'ed\'e0 \'ea\'e0\'e6\'e4\'ee\'ec \'e8\'e7 \'ed\'e8\'f5 \'ef\'ee\'f1\'eb\'e5 \'ee\'e1\'ec\'e5\'ed\'e0 \'e4\'ee\'eb\'e6\'ed\'ee \'ee\'ea\'e0\'e7\'e0\'f2\'fc\'f1\'ff = 100 LSA. \'c4\'e0\'eb\'fc\'f8\'e5 \'ed\'e0 \'ee\'f1\'ed\'ee\'e2\'e0\'ed\'e8\'e8 \'fd\'f2\'e8\'f5 \'e4\'e0\'ed\'ed\'fb\'f5 \'eb\'fe\'e1\'ee\'e9 \'f0\'ee\'f3\'f2\'e5\'f0, \'e7\'e0\'ef\'f3\'f1\'f2\'e8\'e2 "\'c0\'eb\'e3\'ee\'f0\'e8\'f2\'ec \'c4\'e5\'e9\'ea\'f1\'f2\'f0\'fb", \'ec\'ee\'e6\'e5\'f2 \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'e8\'f2\'fc - \'e5\'f1\'eb\'e8 \'ea\'ee \'ec\'ed\'e5 \'ef\'f0\'e8\'f8\'b8\'eb \'ef\'e0\'ea\'e5\'f2 \'f1 Destination IP 10.15.23.66, \'e2 \'ea\'e0\'ea\'ee\'e9 \'e8\'e7 6 \'f1\'e2\'ee\'e8\'f5 \'eb\'e8\'ed\'ea\'ee\'e2 \'ff \'e5\'e3\'ee \'e4\'ee\'eb\'e6\'e5\'ed \'e7\'e0\'f1\'f3\'ed\'f3\'f2\'fc, \'f7\'f2\'ee\'e1\'fb \'ee\'ed \'e4\'ee\'f8\'b8\'eb \'e4\'ee \'ec\'e5\'f1\'f2\'e0 \'ed\'e0\'e7\'ed\'e0\'f7\'e5\'ed\'e8\'ff \'e7\'e0 \'ec\'e8\'ed\'e8\'ec\'e0\'eb\'fc\'ed\'ee\'e5 \'ea\'ee\'eb\'e8\'f7\'e5\'f1\'f2\'e2\'ee hop-\'ee\'e2? \'c2 4-\'fb\'e9 \'eb\'e8\'ed\'ea. \'ce\'f2\'ef\'f0\'e0\'e2\'e8\'eb. \'cf\'e0\'ea\'e5\'f2 \'ef\'f0\'e8\'f8\'b8\'eb \'ed\'e0 \'f1\'eb\'e5\'e4\'f3\'fe\'f9\'e8\'e9 \'f0\'ee\'f3\'f2\'e5\'f0. \'d2\'ee\'f2 \'e8\'ec\'e5\'e5\'f2 \'f2\'e0\'ea\'f3\'fe \'e6\'e5 \'e1\'e0\'e7\'f3 LSA, \'f2\'ee\'f2 \'e6\'e5 "\'c0\'eb\'e3\'ee\'f0\'e8\'f2\'ec \'c4\'e5\'e9\'ea\'f1\'f2\'f0\'fb" \'e8 ...\par
+\par
+\'cc\'e8\'ed\'e8\'ec\'e0\'eb\'fc\'ed\'e0\'ff \'ed\'e0\'f1\'f2\'f0\'ee\'e9\'ea\'e0 OSPF:\par
+interface fa0/12\par
+\tab ip address 10.0.0.12 255.255.255.0\par
+interface fa0/18\par
+\tab ip address 192.168.0.54 255.255.255.0\par
+router ospf 1 \tab\tab\tab\tab\tab - \'e7\'e0\'ef\'f3\'f1\'f2\'e8\'eb\'e8 \'f1\'e0\'ec deamon \'ed\'e0 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'e5\par
+network 10.0.0.12 0.0.0.0 area 0 \tab - \'e2\'ea\'eb\'fe\'f7\'e0\'e5\'ec ospf \'ed\'e0 \'e8\'ed\'f2\'e5\'f0\'f4\'e5\'e9\'f1\'e5 fa0/12. \'d2\'e5\'ef\'e5\'f0\'fc OSPF \'e1\'f3\'e4\'e5\'f2 \'e8\'f1\'ea\'e0\'f2\'fc neighbor \'f2\'ee\'eb\'fc\'ea\'ee \'e7\'e0 \'fd\'f2\'e8\'ec \'e8\'ed\'f2\'e5\'f0\'f4\'e5\'e9\'f1\'ee\'ec. LSA \'e1\'f3\'e4\'e5\'f2 \'f1\'ee\'e4\'e5\'f0\'e6\'e0\'f2\'fc \'e4\'e0\'ed\'ed\'fb\'e5 \'f2\'ee\'eb\'fc\'ea\'ee \'e4\'eb\'ff \'fd\'f2\'ee\'e3\'ee \'e8\'ed\'f2\'e5\'f0\'f4\'e5\'e9\'f1\'e0. \'cf\'f0\'ee fa0/18 \'ed\'e8\'f7\'e5\'e3\'ee \'e7\'ed\'e0\'f2\'fc \'ed\'e5 \'e1\'f3\'e4\'e5\'f2 \'e8 \'ef\'e5\'f0\'e5\'e4\'e0\'e2\'e0\'f2\'fc \'e8\'ed\'f4\'ee\'f0\'ec\'e0\'f6\'e8\'fe \'ee \'ed\'b8\'ec \'f2\'ee\'e6\'e5 \'ed\'e5 \'e1\'f3\'e4\'e5\'f2.\par
+\par
+\par
+\'d2\'ee\'ef\'ee\'eb\'ee\'e3\'e8\'ff.\par
+\'d1\'f3\'f9\'e5\'f1\'f2\'e2\'f3\'fe \'e2\'f1\'e5\'e3\'ee \'f2\'f0\'e8 \'f2\'ee\'ef\'ee\'eb\'ee\'e3\'e8\'e8 \'ef\'ee\'f1\'f2\'f0\'ee\'e5\'ed\'e8\'ff \'f1\'e5\'f2\'e5\'e9:\par
+1. \'d8\'e8\'ed\'e0 - \'ef\'f0\'e8\'ec\'e5\'f0: \'ea \'e5\'e4\'e8\'ed\'f1\'f2\'e2\'e5\'ed\'ed\'ee\'e9 \'e6\'e8\'eb\'e5 \'ea\'ee\'e0\'ea\'f1\'e8\'e0\'eb\'fc\'ed\'ee\'e3\'ee \'ea\'e0\'e1\'e5\'eb\'ff \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e0\'fe\'f2\'f1\'ff \'e0\'e1\'ee\'ed\'e5\'ed\'f2\'fb. \'d1\'e5\'e9\'f7\'e0\'f1 \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'f3\'e5\'f2\'f1\'ff \'e2 \'ee\'f1\'ed\'ee\'e2\'ed\'ee\'ec \'e2\'ed\'f3\'f2\'f0\'e8 \'ec\'e8\'ea\'f0\'ee\'ef\'f0\'ee\'f6\'e5\'f1\'f1\'ee\'f0\'ee\'e2.\par
+2. \'ca\'ee\'eb\'fc\'f6\'ee - \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'f3\'e5\'f2\'f1\'ff \'ef\'f0\'ee\'e2\'e0\'e9\'e4\'e5\'f0\'e0\'ec\'e8 \'ea\'ee\'e3\'e4\'e0 \'ed\'e0\'e4\'ee \'ef\'ee\'ea\'f0\'fb\'f2\'fc \'e1\'ee\'eb\'fc\'f8\'f3\'fe \'e3\'e5\'ee\'e3\'f0\'e0\'f4\'e8\'f7\'e5\'f1\'ea\'f3\'fe \'ef\'eb\'ee\'f9\'e0\'e4\'fc \'f1 \'ed\'e8\'e7\'ea\'ee\'e9 \'ef\'eb\'ee\'f2\'ed\'ee\'f1\'f2\'fc\'fe \'e0\'e1\'ee\'ed\'e5\'ed\'f2\'ee\'e2 + \'ea\'ee\'eb\'fc\'f6\'ee \'e0\'e2\'f2\'ee\'ec\'e0\'f2\'e8\'f7\'e5\'f1\'ea\'e8 \'f1\'ee\'e7\'e4\'e0\'b8\'f2 \'ee\'f2\'ea\'e0\'e7\'ee\'f3\'f1\'f2\'ee\'e9\'f7\'e8\'e2\'ee\'f1\'f2\'fc.\par
+3. \'c7\'e2\'e5\'e7\'e4\'e0 - \'e2 \'ee\'e4\'ed\'ee\'ec \'ec\'e5\'f1\'f2\'e5 \'ea\'f3\'f7\'e0 \'ea\'ee\'ec\'ef\'ee\'e2. \'cf\'ee\'fd\'f2\'ee\'ec\'f3 \'e2 Enterprise \'e2 \'ee\'f1\'ed\'ee\'e2\'ed\'ee\'ec \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'f3\'e5\'f2\'f1\'ff \'e8\'ec\'e5\'ed\'ed\'ee \'e7\'e2\'e5\'e7\'e4\'e0.\par
+\par
+\'c2 Cisco \'f2\'e0\'ea\'ee\'e9 \'e4\'e8\'e7\'e0\'e9\'ed \'f1\'e5\'f2\'e8 \'ed\'e0\'e7\'fb\'e2\'e0\'eb\'f1\'ff Cisco Safe.\par
+{\field{\*\fldinst{HYPERLINK "https://www.researchgate.net/profile/Rafidah_Md_Noor/publication/233815226/figure/fig1/AS:300120533946372@1448565719517/High-Level-View-of-Cisco-SAFE-Architecture-Oppenheimer-2011.png"}}{\fldrslt{\ul\cf2 https://www.researchgate.net/profile/Rafidah_Md_Noor/publication/233815226/figure/fig1/AS:300120533946372@1448565719517/High-Level-View-of-Cisco-SAFE-Architecture-Oppenheimer-2011.png}}}\f0\fs22\par
+\par
+\'ca\'e0\'ea \'f1\'f2\'f0\'ee\'e8\'f2\'f1\'ff "\'c7\'e2\'e5\'e7\'e4\'e0".\par
+\par
+Campus - \'ef\'ee\'eb\'fc\'e7\'ee\'e2\'e0\'f2\'e5\'eb\'e8.\par
+\'c2 \'f6\'e5\'ed\'f2\'f0\'e5 \'f1\'e5\'f2\'e8 (\'f3\'f0\'ee\'e2\'e5\'ed\'fc Core) \'f3\'f1\'f2\'e0\'ed\'e0\'e2\'eb\'e8\'e2\'e0\'e5\'f2\'f1\'ff \'f1\'e0\'ec\'fb\'e9 \'ef\'f0\'ee\'e8\'e7\'e2\'ee\'e4\'e8\'f2\'e5\'eb\'fc\'ed\'fb\'e9 \'f1\'e2\'e8\'f2\'f7. \'c2 \'e8\'e4\'e5\'e0\'eb\'e5 Catalyst 6500. \'c2 \'c3\'e5\'eb\'e8\'ee\'f1\'e5 \'fd\'f2\'ee \'e1\'fb\'eb \'f1\'f2\'e5\'ea \'e8\'e7 2-\'f5 Cisco 3750, \'ea\'ee\'f2\'ee\'f0\'fb\'e9 \'f1\'f2\'ee\'ff\'eb \'e2 \'f1\'e5\'f0\'e2\'e5\'f0\'ed\'ee\'e9. \'cf\'f0\'e5\'e4\'f1\'f2\'e0\'e2\'e8\'ec \'f7\'f2\'ee \'e7\'e4\'e0\'ed\'e8\'e9, \'e3\'e4\'e5 \'f1\'e8\'e4\'e5\'eb \'ef\'e5\'f0\'f1\'ee\'ed\'e0\'eb \'e1\'fb\'eb\'ee \'e1\'fb \'f8\'f2\'f3\'ea 5. \'c2 \'ea\'e0\'e6\'e4\'ee\'ec \'f2\'e0\'ea\'ee\'ec \'e7\'e4\'e0\'ed\'e8\'e8 \'f1\'f2\'e0\'e2\'e8\'ec \'f1\'e2\'e8\'f2\'f7 \'ea\'eb\'e0\'f1\'f1\'ee\'ec \'ed\'e8\'e6\'e5, \'f3\'f1\'eb\'ee\'e2\'ed\'ee Cisco 3560 (\'fd\'f2\'ee \'f3\'f0\'ee\'e2\'e5\'ed\'fc Distribution) - \'e4\'e2\'f3\'ec\'ff \'eb\'e8\'ed\'ea\'e0\'ec\'e8 \'f1\'ee\'e5\'e4\'e8\'ed\'ff\'e5\'ec \'f1 Core. \'c4\'e0\'eb\'e5\'e5 \'ea\'e0\'e6\'e4\'fb\'e9 \'fd\'f2\'e0\'e6\'ed\'fb\'e9 \'f1\'e2\'e8\'f2\'f7 (\'f3\'f0\'ee\'e2\'e5\'ed\'fc Access) \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e0\'e5\'ec \'ea \'f3\'f0\'ee\'e2\'e5\'ed\'fe Distribution.\par
+\par
+Data Center.\par
+\'c2\'f1\'e5 \'eb\'e8\'ed\'ea\'e8 \'ee\'f2 \'f1\'e5\'f0\'e2\'e5\'f0\'ee\'e2 \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e0\'e5\'ec \'eb\'e8\'e1\'ee \'ed\'e5\'ef\'ee\'f1\'f0\'e5\'e4\'f1\'f2\'e2\'e5\'ed\'ed\'ee \'ea Core (\'ea\'e0\'ea \'e2\'f0\'ee\'e4\'e5 \'e1\'fb \'fd\'f2\'ee \'e1\'fb\'eb\'ee \'e2 \'c3\'e5\'eb\'e8\'ee\'f1\'e5), \'eb\'e8\'e1\'ee \'f2\'e0\'ea \'e6\'e5 \'ea\'e0\'ea \'e8 Campus \'f7\'e5\'f0\'e5\'e7 \'ef\'f0\'ee\'ec\'e5\'e6\'f3\'f2\'ee\'f7\'ed\'fb\'e9 Distribution \'f3\'f0\'ee\'e2\'e5\'ed\'fc \'f2\'ee\'eb\'fc\'ea\'ee \'f3\'e6\'e5 \'e4\'eb\'ff Data Center.\par
+\par
+Internet Edge.\par
+\'c1\'eb\'ee\'ea \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e5\'ed\'e8\'ff \'ea \'c8\'ed\'f2\'e5\'f0\'ed\'e5\'f2. \'d1\'ee\'f1\'f2\'ee\'e8\'f2 \'e8\'e7 Firewall \'e8 \'f0\'ee\'f3\'f2\'e5\'f0\'e0, \'e2 \'ea\'ee\'f2\'ee\'f0\'fb\'e9 \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e0\'e5\'ec \'eb\'e8\'ed\'ea \'ee\'f2 \'ef\'f0\'ee\'e2\'e0\'e9\'e4\'e5\'f0\'e0. \'c1\'eb\'ee\'ea \'f2\'e0\'ea \'e6\'e5 \'ee\'e4\'ed\'ee\'e9 \'ed\'ee\'e3\'ee\'e9 \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e5\'ed \'ea Core.\par
+\par
+\'c1\'fb\'e2\'e0\'fe\'f2 \'e5\'f9\'b8 \'e1\'eb\'ee\'ea\'e8 Management - \'f1\'ee\'f1\'f2\'ee\'e8\'f2 \'e8\'e7 \'f1\'e5\'f0\'e2\'e5\'f0\'ee\'e2 \'ec\'ee\'ed\'e8\'f2\'ee\'f0\'e8\'ed\'e3\'e0 \'e8 \'f3\'ef\'f0\'e0\'e2\'eb\'e5\'ed\'e8\'ff. \'c2\'f1\'ff\'ea\'e8\'e5 Syslog, Cisco Works, Radius/Tacacs \'e8 \'f2.\'ef. \'d2\'e0\'ea \'e6\'e5 \'ee\'e4\'ed\'ee\'e9 \'ed\'ee\'e3\'ee\'e9 \'ea Core.\par
+\par
+WAN Edge.\par
+\'ce\'e1\'fb\'f7\'ed\'ee \'e2\'fb\'e4\'e5\'eb\'e5\'ed\'ed\'fb\'e5 \'ea\'e0\'ed\'e0\'eb\'fb \'ec\'e5\'e6\'e4\'f3 \'ee\'f4\'e8\'f1\'e0\'ec\'e8. \'cd\'e0\'e4\'ee \'ee\'f4\'e8\'f1\'fb \'e2 \'cc\'ee\'f1\'ea\'e2\'e5 \'e8 \'c8\'e6\'e5\'e2\'f1\'ea\'e5 \'f1\'e2\'ff\'e7\'e0\'f2\'fc IP \'f2\'e5\'eb\'e5\'f4\'ee\'ed\'e8\'e5\'e9. \'cf\'f0\'ee\'e1\'f0\'e0\'f1\'fb\'e2\'e0\'f2\'fc IP \'f2\'e5\'eb\'e5\'f4\'ee\'ed\'e8\'fe \'f7\'e5\'f0\'e5\'e7 \'c8\'ed\'f2\'e5\'f0\'ed\'e5\'f2 - \'ed\'e5 \'f5\'ee\'f0\'ee\'f8\'ee, \'e2\'ee\'e7\'ec\'ee\'e6\'e5\'ed packet lost, \'e7\'e0\'e4\'e5\'f0\'e6\'ea\'e8, jitter. \'c7\'e0\'ea\'e0\'e7\'fb\'e2\'e0\'e5\'ec \'f3 \'ef\'f0\'ee\'e2\'e0\'e9\'e4\'e5\'f0\'e0 \'ea\'e0\'ed\'e0\'eb \'f2\'ee\'f7\'ea\'e0-\'f2\'ee\'f7\'ea\'e0 \'f1 \'f5\'e0\'f0\'e0\'ea\'f2\'e5\'f0\'e8\'f1\'f2\'e8\'ea\'e0\'ec\'e8 packet lost = 0, delay < 150 ms, jitter < 5 ms.\par
+\par
+\'c3\'cf\'c1\par
+\'d2\'e0\'ea \'ea\'e0\'ea \'ee\'f4\'e8\'f1 \'ef\'eb\'e0\'ed\'e8\'f0\'ee\'e2\'e0\'eb\'f1\'ff \'ed\'e5\'e1\'ee\'eb\'fc\'f8\'ee\'e9 (~80 \'f7\'e5\'eb\'ee\'e2\'e5\'ea, ~10 \'f1\'e5\'f0\'e2\'e5\'f0\'ee\'e2) \'f0\'e5\'f8\'e8\'eb\'e8 \'f3\'f0\'ee\'e2\'ed\'e8 Core, Campus-Access \'e8 Data Center-Access \'ee\'e1\'fa\'e5\'e4\'e8\'ed\'e8\'f2\'fc \'e2 \'ee\'e4\'e8\'ed \'e1\'eb\'ee\'ea: 4-\'e5 Cisco 3750 \'ee\'e1\'fa\'e5\'e4\'e8\'ed\'b8\'ed\'ed\'fb\'e5 \'e2 \'f1\'f2\'e5\'ea.\par
+2-\'e5 \'e8\'e7 \'ed\'e8\'f5 \'ef\'ee 24 \'e3\'e8\'e3\'e0\'e1\'e8\'f2\'ed\'fb\'f5 \'ef\'ee\'f0\'f2\'e0 - \'e4\'eb\'ff \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e5\'ed\'e8\'ff \'f1\'e5\'f0\'e2\'e5\'f0\'ee\'e2.\par
+\'ee\'f1\'f2\'e0\'eb\'fc\'ed\'fb\'e5 2-\'e5 \'ef\'ee 48 100 \'cc\'e1\'e8\'f2 \'ef\'ee\'f0\'f2\'ee\'e2 c PoE \'e4\'eb\'ff \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e5\'ed\'e8\'ff \'ef\'ee\'eb\'fc\'e7\'ee\'e2\'e0\'f2\'e5\'eb\'e5\'e9.\par
+(\'c3\'e8\'e3\'e0\'e1\'e8\'f2\'ed\'fb\'e5 \'e8 100 \'ec\'e5\'e3\'e0\'e1\'e8\'f2\'ed\'fb\'e5 \'e6\'e5\'eb\'e5\'e7\'ea\'e8 \'cc\'ce\'c6\'cd\'ce \'ee\'e1\'fa\'e5\'e4\'e8\'ed\'ff\'f2\'fc \'e2 \'ee\'e4\'e8\'ed \'f1\'f2\'e5\'ea!)\par
+\'e8 \'e2 \'ef\'f0\'e8\'ed\'f6\'e8\'ef\'e5 \'fd\'f2\'ee\'f2 \'ef\'ee\'e4\'f5\'ee\'e4 \'f1\'ef\'ee\'ea\'ee\'e9\'ed\'ee \'f0\'e0\'f1\'f8\'e8\'f0\'ff\'e5\'f2\'f1\'ff, \'e5\'f1\'eb\'e8 \'f3\'e2\'e5\'eb\'e8\'f7\'e8\'e2\'e0\'e5\'f2\'f1\'ff \'ea\'ee\'eb\'e8\'f7\'e5\'f1\'f2\'e2\'ee \'ef\'ee\'eb\'fc\'e7\'ee\'e2\'e0\'f2\'e5\'eb\'e5\'e9/\'f1\'e5\'f0\'e2\'e5\'f0\'ee\'e2, \'f2.\'e5. \'e2 \'ea \'f1\'f2\'e5\'ea\'f3 \'ec\'ee\'e6\'ed\'ee \'e1\'fb\'eb\'ee \'e1\'fb \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e8\'f2\'fc \'e5\'f9\'b8 \'ee\'e4\'ed\'f3 3750. (\'cc\'e0\'ea\'f1\'e8\'ec\'f3\'ec \'e2 \'f1\'f2\'e5\'ea\'e5 \'ec\'ee\'e6\'e5\'f2 \'e1\'fb\'f2\'fc 8 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2)\par
+\par
+\'cc\'ee\'e4\'f3\'eb\'fc Internet Edge \'f1\'ee\'f1\'f2\'ee\'ff\'eb \'e8\'e7 ASA + \'f0\'ee\'f3\'f2\'e5\'f0 Cisco 2821.\par
+\par
+\'c7\'e0\'e4\'e0\'f7\'e0 \'f0\'ee\'f3\'f2\'e5\'f0\'e0\par
+\'ce\'e4\'ed\'ee\'e9 \'ed\'ee\'e3\'ee\'e9 \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e5\'ed\'e8\'e5 \'ea \'ef\'f0\'ee\'e2\'e0\'e9\'e4\'e5\'f0\'f3, \'e4\'f0\'f3\'e3\'ee\'e9 \'ea ASA\par
++ \'e4\'e5\'eb\'e0\'f2\'fc NAT\par
++ \'f2\'e0\'ea \'ed\'e0\'e7\'fb\'e2\'e0\'e5\'ec\'fb\'e5 anti-spoofing list - \'fd\'f2\'ee \'f2\'e8\'ef\'e0 \'ee\'f2 \'ef\'f0\'ee\'e2\'e0\'e9\'e4\'e5\'f0\'e0/\'e8\'e7 \'c8\'ed\'f2\'e5\'f0\'ed\'e5\'f2\'e0 \'ed\'e5 \'ec\'ee\'e3\'f3\'f2 \'ef\'f0\'e8\'eb\'e5\'f2\'e0\'f2\'fc \'ef\'e0\'ea\'e5\'f2\'fb \'f1 Source IP \'e0\'e4\'f0\'e5\'f1\'e0\'ec\'e8 192.168.0.0, 10.0.0.0, 172.16.0.0.\par
++ \'ef\'ee\'f2\'ee\'ec \'f3 \'c3\'cf\'c1 \'ee\'f2\'ea\'f0\'fb\'eb\'f1\'ff \'e5\'f9\'b8 \'ee\'e4\'e8\'ed \'ee\'f4\'e8\'f1 \'e8 \'ed\'e0\'e4\'ee \'e1\'fb\'eb\'ee \'f1\'ee\'e5\'e4\'e8\'ed\'e8\'f2\'fc \'f2\'f3\'ed\'ed\'e5\'eb\'e5\'ec \'fd\'f2\'e8 \'ee\'f4\'e8\'f1\'fb - \'ed\'e0 \'f0\'ee\'f3\'f2\'e5\'f0\'e5 \'ef\'ee\'e4\'ed\'e8\'ec\'e0\'eb\'f1\'ff \'fd\'f2\'ee\'f2 \'f2\'f3\'ed\'ed\'e5\'eb\'fc.\par
+\par
+\'c7\'e0\'e4\'e0\'f7\'e0 ASA\par
+\'ce\'e4\'ed\'ee\'e9 \'ed\'ee\'e3\'ee\'e9 \'e2 Core, \'e2\'f2\'ee\'f0\'ee\'e9 \'e2 \'f0\'ee\'f3\'f2\'e5\'f0, \'f2\'f0\'e5\'f2\'fc\'e5\'e9 \'e2 DMZ \'f1\'e2\'e8\'f2\'f7 Cisco 2960, \'ea \'ea\'ee\'f2\'ee\'f0\'ee\'ec\'f3 \'ef\'ee\'e4\'ea\'eb\'fe\'f7\'e0\'eb\'f1\'ff FTP \'f1\'e5\'f0\'e2\'e5\'f0, FrontEnd Exchange, Proxy\par
++ \'e4\'e5\'f2\'e0\'eb\'e8\'e7\'e0\'f6\'e8\'ff access-list-\'ee\'e2 (\'e5\'f1\'eb\'e8 \'ed\'e0 \'f0\'ee\'f3\'f2\'e5\'f0\'e5 \'e1\'ee\'eb\'fc\'f8\'e8\'e5 \'e1\'eb\'ee\'ea\'e8 anti-spoofing list, \'f2\'ee \'e7\'e4\'e5\'f1\'fc \'ea\'ee\'ed\'ea\'f0\'e5\'f2\'ed\'ee \'ea\'e0\'ea\'e8\'e5 IP \'e0\'e4\'f0\'e5\'f1\'e0 \'f0\'e0\'e7\'f0\'e5\'f8\'e0\'e5\'ec, \'ea\'e0\'ea\'e8\'e5 \'ef\'ee\'f0\'f2\'fb \'f0\'e0\'e7\'f0\'e5\'f8\'e0\'e5\'ec)\par
++ \'e2\'f1\'e5 \'e2\'e8\'e4\'fb \'f8\'f2\'f4\'f0\'ee\'e2\'e0\'ed\'e8\'ff. \'cc\'fb \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'ee\'e2\'e0\'eb\'e8 \'f8\'e8\'f4\'f0\'ee\'e2\'e0\'ed\'e8\'e5 \'e4\'eb\'ff \'f3\'e4\'e0\'eb\'b8\'ed\'ed\'ee\'e3\'ee \'e4\'ee\'f1\'f2\'f3\'ef\'e0 Cisco VPN Client.\par
+}
+ 
