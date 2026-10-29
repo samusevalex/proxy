@@ -1,1 +1,1 @@
-﻿function FindProxyForURL(url,host){return "PROXY 103.119.19.218:3128"}
+﻿function FindProxyForURL(url,host){return "PROXY 159.223.234.57:3128"}
